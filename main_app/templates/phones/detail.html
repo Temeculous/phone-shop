@@ -27,6 +27,12 @@
           </tr>
         </tbody>
       </table>
+      <table class="table table-bordered">
+      <tr>
+        <td><a href="{% url 'phone_update' phone.id %}">Update</a></td>
+        <td><a href="{% url 'phone_delete' phone.id %}">Delete</a></td>
+      </tr>
+      </table>
     </div>
   </div>
 </div>

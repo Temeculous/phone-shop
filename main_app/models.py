@@ -20,4 +20,4 @@ class Phone(models.Model):
     
 
     def get_absolute_url(self):
-       return reverse('phones' )
+       return reverse('detail', kwargs={'phone_id': self.id})

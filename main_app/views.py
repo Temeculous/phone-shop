@@ -25,3 +25,11 @@ def phone_detail(request, phone_id):
 class PhoneCreate(CreateView):
     model = Phone
     fields = '__all__'
+
+class PhoneUpdate(UpdateView):
+    model = Phone
+    fields = ['make', 'serial', 'color', 'condition']
+
+class PhoneDelete(DeleteView):
+    model = Phone
+    success_url = '/phones'
