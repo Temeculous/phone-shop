@@ -10,7 +10,7 @@ def home(request):
 
 # Accesses all the attributes of the phone class and passes the data down
 # to the index.html
-def phones_idex(request):
+def phones_index(request):
     phones = Phone.objects.all()
     return render(request, 'phones/index.html', {
         'phones': phones

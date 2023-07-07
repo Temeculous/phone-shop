@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Phones</h1
+{% for phone in phones %}
+
+    <div>
+      <div>
+        <span> {{phone.make}} </span>
+      </div>
+    </div>
+
+{% endfor %}
 
 {% endblock %}
