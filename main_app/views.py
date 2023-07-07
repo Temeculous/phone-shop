@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Importing the phone model so we have acces to the class
 from .models import Phone           
@@ -20,3 +21,7 @@ def phones_index(request):
 def phone_detail(request, phone_id):
     phone = Phone.objects.get(id=phone_id)
     return render(request, 'phones/detail.html', {'phone': phone})
+
+class PhoneCreate(CreateView):
+    model = Phone
+    fields = '__all__'
