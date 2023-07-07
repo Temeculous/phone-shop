@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 from django.db import models
@@ -17,3 +18,7 @@ class Phone(models.Model):
     # It makes it easier for us to read
     def __str__(self):
       return f'{self.make} ({self.id})'
+    
+
+    def get_absolute_url(self):
+       return reverse('phones', kwargs={'phones_id': self.id})
