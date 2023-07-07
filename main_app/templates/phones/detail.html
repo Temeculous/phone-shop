@@ -1,11 +1,15 @@
+
 {% extends 'base.html' %} 
 {% block content %}
-<!-- Inside of div for styling later -->
-<div>
-  <div><h1>{{phone.make}}</h1></div>
-  <div><h2>{{phone.serial}}</h2></div>
-  <div><h2>{{phone.color}}</h2></div>
-  <div><h2>{{phone.condition}}</h2></div>
-  <div><h2>{{phone.bought_at}}</h2></div>
-</div>
+
+  <div class="card text-white bg-dark mb-3">
+    <div class="card-header"> {{phone.make}} </div>
+      <div class="card-body">
+        <h5 class="card-title">Model: {{phone.serial}}</h5>
+        <p class="card-text">Colour: {{phone.color}} </p>
+        <p class="card-text">Condition: {{phone.conditon}}</p>
+        <p class="card-text">We bought at: {{phone.bought_at}}</p>
+      </div>
+  </div>
+
 {% endblock %}
