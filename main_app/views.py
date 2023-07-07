@@ -15,3 +15,8 @@ def phones_index(request):
     return render(request, 'phones/index.html', {
         'phones': phones
     })
+
+# Find's phone by id and returns a page containing more info on that phone object
+def phone_detail(request, phone_id):
+    phone = Phone.objects.get(id=phone_id)
+    return render(request, 'phones/detail.html', {'phone': phone})
