@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
+<div class="container" id="phones-container">
   <h2>Available Devices</h2>
   {% for phone in phones %}
   <a href="{% url 'detail' phone.id %}" class="list-group-item list-group-item-action">

@@ -12,6 +12,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: rgb(255, 255, 240)
+  
+
   }
   
   main {
@@ -23,3 +26,4 @@ body {
     text-align: right;
   }
   
+
