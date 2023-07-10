@@ -12,7 +12,7 @@ class Phone(models.Model):
     serial = models.CharField(max_length=25)
     color = models.CharField(max_length=10)
     condition = models.TextField(max_length=300)
-    bought_at = models.DateTimeField(default=timezone.now)
+    bought_at = models.DateTimeField(default=timezone.now, blank=True,null=True )
 
     # It makes it easier for us to read
     def __str__(self):

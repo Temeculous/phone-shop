@@ -1,26 +1,57 @@
+
 {% extends 'base.html' %}
 {% block content %}
-<div class="addphone" style="padding-top: 70px;">
+<style>
+.addphone {
+  padding-top: 70px;
+}
 
-  {%if object %}
-  <h1>Edit: <span>{{object.type}}</span></h1>
+.card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+</style>
+
+<div class="addphone">
+  {% if object %}
+  <h1>Edit: <span>{{ object.type }}</span></h1>
   {% else %}
   <h1>Add Phone</h1>
   {% endif %}
-  
-  <form action="" method="POST">
-    {% csrf_token %}
-    <table>
-      {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit" class="btn" />
-  </form>
+
+  <div class="card">
+    <form action="" method="POST">
+      <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_table }}
+      </div>
+      <input type="submit" value="Submit" class="btn btn-primary" />
+    </form>
+  </div>
 </div>
-
 {% endblock %}
-
-
-
-
-
 
