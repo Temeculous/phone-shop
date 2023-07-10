@@ -64,7 +64,7 @@ MIDDLEWARE = [
 # for heroku
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-ROOT_URLCONF = 'phoneShop.urls'
+ROOT_URLCONF = 'PHONE-SHOP.urls'
 
 TEMPLATES = [
     {
