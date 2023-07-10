@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'phoneShop.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PHONE-SHOP.settings')
 
 application = get_asgi_application()
